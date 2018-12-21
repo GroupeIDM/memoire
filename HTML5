@@ -1,0 +1,338 @@
+<!-- index -->
+<html>
+<head>
+<title>Calcul Moyenne</title>
+<link rel="stylesheet" href="./mdl/material.min.css">
+<script src="./mdl/material.min.js"></script>
+<link rel="stylesheet" href="./mdl/icon.css">
+<style>
+.demo-card-wide.mdl-card{
+width:320px;
+}
+.demo-card-wide>.mdl-card__title{
+color: #fff;
+height:130px;
+
+background: url('./img/image.png')center / cover;
+}
+.demo-card-wide> .mdl-card__menu{
+color: #fff;
+}
+</style>
+
+</head>
+<body dir="rtl">
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+<header class="mdl-layout__header">
+<div class="mdl-layout__header-row">
+<span class="mdl-layout-title">Calcul Moyenne</span>
+</div>
+</header>
+
+<main class="mdl-layout__content">
+<div class="demo-card-wide mdl-card mdl-shadow--2dp">
+<div class="mdl-card__title">
+<h2 class="mdl-card__title-text">Bienvenue</h2>
+</div>
+<div class="mdl-card__supporting-text">Bienvenue dans l'application Calcul Moyenne
+</div>
+<div class="mdl-card__actions mdl-card--border">
+</div>
+</div>
+</main>
+
+<div class="mdl-layout__drawer"  dir="ltr">
+<span class="mdl-layout-title">Menu</span>
+<nav class="mdl-navigation">
+<a class="mdl-navigation__link" href="./html/sem1.html"> Moyenne Semestre 1</a>
+<a class="mdl-navigation__link" href="./html/sem2.html">Moyenne Semestre  2</a>
+<a class="mdl-navigation__link" href="./html/moyenne.html">Moyenne génèrale</a>
+</nav>
+</div>
+
+</div>
+</body>
+</html>
+<!-- Sem1 -->
+<html>
+<head>
+<title>Moyenne Semestre 1</title>
+<link rel="stylesheet" href="../mdl/material.pink-purple.min.css">
+<script src="../mdl/material.min.js"  charset="utf-8" src="cordova.js"></script>
+<link rel="stylesheet" href="../mdl/icon.css">
+</style>
+</head>
+
+<body dir="ltr">
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+<header class="mdl-layout__header">
+<div class="mdl-layout__header-row">
+<span class="mdl-layout-title">Moyenne Semestre 1</span>
+</div>
+</header>
+<div>
+<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+<input class = "mdl-textfield__input" style="width:200px" type="text" pattern="-?[a-z]*(\.[a-z]+)?" id="e">
+<label class= "mdl-textfield__label" style="width:200px" for="e">Nom d'élève(e)</label>
+</div>
+<div>
+<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+<input class = "mdl-textfield__input" style="width:200px" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="a">
+<label class= "mdl-textfield__label" style="width:200px" for="a">Mathématique</label>
+<span class= "mdl-textfield__error">ce note n'est pas correct </span>
+</div>
+<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+<input class = "mdl-textfield__input" style="width:200px" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="a1">
+<label class= "mdl-textfield__label" style="width:200px" for="a1">coefficient</label>
+<span class= "mdl-textfield__error">ce coefficient n'est pas correct </span>
+</div>
+</div>
+
+<div>
+<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+<input class = "mdl-textfield__input" style="width:200px" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="b">
+<label class= "mdl-textfield__label" style="width:200px" for="b">Arabe</label>
+<span class= "mdl-textfield__error">ce note n'est pas correct </span>
+</div>
+
+<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+<input class = "mdl-textfield__input" style="width:200px" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="b1">
+<label class= "mdl-textfield__label" style="width:200px" for="b1">coefficient</label>
+<span class= "mdl-textfield__error">ce coefficients n'est pas correct </span>
+</div>
+</div>
+
+<div>
+<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+<input class = "mdl-textfield__input" style="width:200px" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="c">
+<label class= "mdl-textfield__label" style="width:200px" for="c">Français</label>
+<span class= "mdl-textfield__error">ce note n'est pas correct</span>
+</div>
+
+<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+<input class = "mdl-textfield__input" style="width:200px" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="c1">
+<label class= "mdl-textfield__label" style="width:200px" for="c1">coefficient</label>
+<span class= "mdl-textfield__error">ce coefficients n'est pas correct </span>
+</div>
+</div>
+<div>
+<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" style="width:100px"
+ OnClick="sem1();" > Calculer </button> 
+</div>
+<a class="mdl-navigation__link" href="../index.html">Retour</a>
+</div>
+<script type="text/javaScript">
+function sem1()
+{
+var a=parseInt(document.getElementById("a").value);
+var b=parseInt(document.getElementById("b").value);
+var c=parseInt(document.getElementById("c").value);
+var a1=parseInt(document.getElementById("a1").value);
+var b1=parseInt(document.getElementById("b1").value);
+var c1=parseInt(document.getElementById("c1").value);
+var res=((a*a1)+(b*b1)+(c*c1))/(a1+b1+c1);
+alert(res);
+}
+</script>
+<div class="mdl-layout__drawer">
+<span class="mdl-layout-title">Menu</span>
+<nav class="mdl-navigation">
+<a class="mdl-navigation__link" href="../html/sem1.html"> Moyenne Semestre 1</a>
+<a class="mdl-navigation__link" href="../html/sem2.html">Moyenne Semestre  2</a>
+<a class="mdl-navigation__link" href="../html/moyenne.html">Moyenne génèrale</a>
+</nav>
+</div>
+</div>
+</body>
+</html>
+<!-- Sem2 -->
+<html>
+<head>
+<title>Moyenne Semestre 2</title>
+<link rel="stylesheet" href="../mdl/material.green-light_green.min.css">
+<script src="../mdl/material.min.js"  charset="utf-8" src="cordova.js"></script>
+<link rel="stylesheet" href="../mdl/icon.css">
+</head>
+
+<body dir="ltr">
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+<header class="mdl-layout__header">
+<div class="mdl-layout__header-row">
+<span class="mdl-layout-title">Moyenne Semestre  2</span>
+</div>
+</header>
+
+
+
+<div>
+
+<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+<input class = "mdl-textfield__input" style="width:200px" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="e">
+<label class= "mdl-textfield__label" style="width:200px" for="e1">Nom d'élève(e)</label>
+</div>
+
+<div>
+<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+<input class = "mdl-textfield__input" style="width:200px" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="a">
+<label class= "mdl-textfield__label" style="width:200px" for="a">Mathématique</label>
+<span class= "mdl-textfield__error">ce note n'est pas correct</span>
+</div>
+
+<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+<input class = "mdl-textfield__input" style="width:200px" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="a1">
+<label class= "mdl-textfield__label" style="width:200px" for="a1">coefficient</label>
+<span class= "mdl-textfield__error">ce coefficients n'est pas correct</span>
+</div>
+</div>
+
+
+<div>
+<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+<input class = "mdl-textfield__input" style="width:200px" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="b">
+<label class= "mdl-textfield__label" style="width:200px" for="b">Arabe</label>
+<span class= "mdl-textfield__error">ce note n'est pas correct </span>
+</div>
+
+<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+<input class = "mdl-textfield__input" style="width:200px" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="b1">
+<label class= "mdl-textfield__label" style="width:200px" for="b1">coefficient</label>
+<span class= "mdl-textfield__error">ce coefficient n'est pas correct</span>
+</div>
+</div>
+
+<div>
+
+<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+<input class = "mdl-textfield__input" style="width:200px" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="c">
+<label class= "mdl-textfield__label" style="width:200px" for="c">Français</label>
+<span class= "mdl-textfield__error">ce note n'est pas correct</span>
+</div>
+
+<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+<input class = "mdl-textfield__input" style="width:200px" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="c1">
+<label class= "mdl-textfield__label" style="width:200px" for="c1">coefficient</label>
+<span class= "mdl-textfield__error">ce coefficient n'est pas correct</span>
+</div>
+</div>
+
+</div>
+
+
+<div>
+
+<div>
+<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored"
+ style="width:100px"OnClick="sem2();" > Calculer</button> 
+ </div>
+
+</div>
+
+<script type="text/javaScript">
+function sem2()
+{
+var a=parseInt(document.getElementById("a").value);
+var b=parseInt(document.getElementById("b").value);
+var c=parseInt(document.getElementById("c").value);
+var a1=parseInt(document.getElementById("a1").value);
+var b1=parseInt(document.getElementById("b1").value);
+var c1=parseInt(document.getElementById("c1").value);
+var res=((a*a1)+(b*b1)+(c*c1))/(a1+b1+c1);
+alert(res);
+}
+</script>
+<a class="mdl-navigation__link" href="../index.html">Retour</a>
+
+<div class="mdl-layout__drawer">
+<span class="mdl-layout-title">Menu</span>
+<nav class="mdl-navigation">
+<a class="mdl-navigation__link" href="../html/sem1.html"> Moyenne Semestre 1</a>
+<a class="mdl-navigation__link" href="../html/sem2.html">Moyenne Semestre  2</a>
+<a class="mdl-navigation__link" href="../html/moyenne.html">Moyenne génèrale</a>
+</nav>
+</div>
+</div>
+
+</body>
+</html>
+<!-- Moyenne -->
+<html>
+<head>
+<title>Moyenne génèrale</title>
+<link rel="stylesheet" href="../mdl/material.amber-red.min.css">
+<script src="../mdl/material.min.js"  charset="utf-8" src="cordova.js"></script>
+<link rel="stylesheet" href="../mdl/icon.css">
+</head>
+
+<body dir="ltr">
+
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+<header class="mdl-layout__header">
+<div class="mdl-layout__header-row">
+<span class="mdl-layout-title">Moyenne génèrale</span>
+</div>
+</header>
+<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+<input class = "mdl-textfield__input" style="width:200px" type="text" pattern="-?[a_z]*(\.[a-z]+)?" id="e">
+<label class= "mdl-textfield__label" style="width:200px" for="e1">Nom d'élève(e)</label>
+
+</div>
+<div>
+<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+<input class = "mdl-textfield__input" style="width:200px" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="a">
+<label class= "mdl-textfield__label" style="width:200px" for="a">Moyenne Semestre 1</label>
+<span class= "mdl-textfield__error">ce note n'est pas correct</span>
+</div>
+<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+<input class = "mdl-textfield__input" style="width:200px" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="a1">
+<label class= "mdl-textfield__label" style="width:200px" for="a1">coefficient</label>
+<span class= "mdl-textfield__error">ce coefficient n'est pas correct</span>
+</div>
+</div>
+
+<div>
+
+<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+<input class = "mdl-textfield__input" style="width:200px" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="b">
+<label class= "mdl-textfield__label" style="width:200px" for="b">Moyenne Semestre 2</label>
+<span class= "mdl-textfield__error">ce note n'est pas correct</span>
+</div>
+  
+<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+<input class = "mdl-textfield__input" style="width:200px" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="b1">
+<label class= "mdl-textfield__label" style="width:200px" for="b1">coefficient</label>
+<span class= "mdl-textfield__error">ce coefficient n'est pas correct</span>
+</div>
+
+</div>
+<div style="gravity:center">
+<div>
+<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored"
+ style="width:100px"OnClick="moyenne();" >Calculer</button> 
+ </div>
+ <a class="mdl-navigation__link" href="../index.html">Retour</a>
+</div>
+
+<script type="text/javaScript">
+function moyenne()
+{
+var a=parseInt(document.getElementById("a").value);
+var b=parseInt(document.getElementById("b").value);
+var a1=parseInt(document.getElementById("a1").value);
+var b1=parseInt(document.getElementById("b1").value);
+var res=((a*a1)+(b*b1))/(a1+b1);
+alert(res);
+}
+</script>
+
+<div class="mdl-layout__drawer">
+<span class="mdl-layout-title">Menu</span>
+<nav class="mdl-navigation">
+<a class="mdl-navigation__link" href="../html/sem1.html">Moyenne Semestre 1</a>
+<a class="mdl-navigation__link" href="../html/sem2.html">Moyenne Semestre  2</a>
+<a class="mdl-navigation__link" href="../html/moyenne.html">Moyenne génèrale</a>
+</nav>
+</div>
+</div>
+
+</body>
+</html>
